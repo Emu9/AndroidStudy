@@ -78,13 +78,14 @@ public class SampleFragment extends Fragment {
                     mBattleCount = 0;
                     mBattleAllResult.setText("対戦結果 : なし");
                     mBattleResultArray.clear();
+                    mCountNum++;
                 } else {
                     mBattleCount++;
                     mCountNum++;
                 }
 
 
-                countText.setText(result);
+
 
 
                 // じゃんけんの出す手
