@@ -17,7 +17,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState); // superを頭につけると継承元を呼び出します。
         setContentView(R.layout.activity_main); // xmlとの紐づけ。Activityで行います。
 
-        // frame_layout_mainの範囲内をnew ItemFragment()でreplace(置換)。これを行うことにより、画面遷移を表現している。
+
+        // frame_layout_mainの範囲内をnew SampleFragment()でreplace(置換)。これを行うことにより、画面遷移を表現している。
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.replace(R.id.frame_layout_main, new SampleFragment());
         transaction.commit();
