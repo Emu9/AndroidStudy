@@ -1,4 +1,4 @@
-package com.example.sumple.status;
+package com.example.sample.status;
 
 /**
  * じゃんけん<br>

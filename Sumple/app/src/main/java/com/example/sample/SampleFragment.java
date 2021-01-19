@@ -1,4 +1,4 @@
-package com.example.sumple;
+package com.example.sample;
 
 import android.os.Bundle;
 import android.os.Handler;
@@ -15,7 +15,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-import com.example.sumple.status.RpsStatus;
+import com.example.sample.status.RpsStatus;
 
 import java.util.ArrayList;
 import java.util.Objects;
@@ -36,7 +36,13 @@ public class SampleFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        mView = inflater.inflate(R.layout.fragment_sumple, container, false);
+        // ここではレイアウトをinflaterするだけに留める。
+        return inflater.inflate(R.layout.fragment_sumple, container, false);
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        // onCreateView()に書くやり方は古かったみたい...。つい先日知りました。
 
         // UIに紐づけ
         mMyHandResult = mView.findViewById(R.id.text_view_my_hand_result); // mViewからR.id.text_view_result1を探して紐づけてるよ！これをすることで該当のUIが操作できる！
@@ -108,8 +114,8 @@ public class SampleFragment extends Fragment {
             }
         });
 
-        return mView;
     }
+
 
     /**
      * じゃんけんの出す手をランダムで決めてくれる。100回に1回くらいは後出しする。

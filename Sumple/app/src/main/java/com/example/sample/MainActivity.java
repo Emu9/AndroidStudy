@@ -1,4 +1,4 @@
-package com.example.sumple;
+package com.example.sample;
 
 import android.os.Bundle;
 
