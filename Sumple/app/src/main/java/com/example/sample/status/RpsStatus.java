@@ -14,7 +14,7 @@ public enum RpsStatus {
     SCISSORS("✌", 1),
     CHEAT("後出し負け！！！", -1);
 
-    private String mLabel;
+    private final String mLabel;
     private int mId;
 
     RpsStatus(String label, int id) {
