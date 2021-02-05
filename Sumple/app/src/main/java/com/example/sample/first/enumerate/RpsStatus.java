@@ -1,4 +1,4 @@
-package com.example.sumple.status;
+package com.example.sample.first.enumerate;
 
 /**
  * じゃんけん<br>
@@ -14,8 +14,11 @@ public enum RpsStatus {
     SCISSORS("✌", 1),
     CHEAT("後出し負け！！！", -1);
 
-    private String mLabel;
-    private int mId;
+    private final String mLabel;
+
+    // コミット時の状態との差分が見れます！
+    private final int mId;
+
 
     RpsStatus(String label, int id) {
         mLabel = label;
