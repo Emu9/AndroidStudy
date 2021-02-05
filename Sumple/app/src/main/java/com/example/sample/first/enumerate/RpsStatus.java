@@ -1,4 +1,4 @@
-package com.example.sample.status;
+package com.example.sample.first.enumerate;
 
 /**
  * じゃんけん<br>
@@ -15,7 +15,10 @@ public enum RpsStatus {
     CHEAT("後出し負け！！！", -1);
 
     private final String mLabel;
-    private int mId;
+
+    // コミット時の状態との差分が見れます！
+    private final int mId;
+
 
     RpsStatus(String label, int id) {
         mLabel = label;

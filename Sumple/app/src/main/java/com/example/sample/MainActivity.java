@@ -5,6 +5,8 @@ import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.example.sample.second.SampleFragment2;
+
 public class MainActivity extends AppCompatActivity {
 
     /**
@@ -19,13 +21,8 @@ public class MainActivity extends AppCompatActivity {
 
         // frame_layout_mainの範囲内をnew ItemFragment()でreplace(置換)。これを行うことにより、画面遷移を表現している。
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        transaction.replace(R.id.frame_layout_main, new SampleFragment());
+        transaction.replace(R.id.frame_layout_main, new SampleFragment2());
         transaction.commit();
     }
 
-    @Override
-    public void onResume() {
-        super.onResume();
-        //
-    }
 }

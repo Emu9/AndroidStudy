@@ -1,4 +1,4 @@
-package com.example.sample;
+package com.example.sample.first;
 
 import android.os.Bundle;
 import android.os.Handler;
@@ -15,13 +15,14 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-import com.example.sample.status.RpsStatus;
+import com.example.sample.R;
+import com.example.sample.first.enumerate.RpsStatus;
 
 import java.util.ArrayList;
 import java.util.Objects;
 import java.util.Random;
 
-public class SampleFragment extends Fragment {
+public class SampleFragment1 extends Fragment {
 
     // コードは基本的にAOSPに沿って書いています。なのでフィールド変数とやグローバル変数には頭にm付けてます。Androidを開発するなら頭にm付けよう！！！！staticだったら頭にsだよ！
     private View mView;
@@ -29,6 +30,9 @@ public class SampleFragment extends Fragment {
     private TextView mEnemyResult;
     private TextView mBattleResult;
     private TextView mBattleAllResult;
+    /**
+     * 対戦回数
+     */
     private int mBattleCount = 0;
     private ArrayList mBattleResultArray;
 
@@ -37,12 +41,11 @@ public class SampleFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         // ここではレイアウトをinflaterするだけに留める。
-        return inflater.inflate(R.layout.fragment_sumple, container, false);
+        return inflater.inflate(R.layout.fragment_sample, container, false);
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        // onCreateView()に書くやり方は古かったみたい...。つい先日知りました。
 
         // UIに紐づけ
         mMyHandResult = mView.findViewById(R.id.text_view_my_hand_result); // mViewからR.id.text_view_result1を探して紐づけてるよ！これをすることで該当のUIが操作できる！
