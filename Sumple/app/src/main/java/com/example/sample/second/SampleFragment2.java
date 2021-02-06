@@ -42,6 +42,7 @@ public class SampleFragment2 extends Fragment {
 
         // ボタンを押下時の処理
         button.setOnClickListener(v -> {
+
             // インクリメント
             mNumber++;
             // 表示を更新
