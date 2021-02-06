@@ -31,6 +31,7 @@ public class SampleFragment extends Fragment {
     private TextView mBattleAllResult;
     private int mBattleCount = 0;
     private ArrayList mBattleResultArray;
+    private int mCountNum = 1;
 
 
     @Nullable
@@ -47,6 +48,8 @@ public class SampleFragment extends Fragment {
 
 
         Button button = mView.findViewById(R.id.button1);
+        TextView countText = mView.findViewById(R.id.text_count);
+        countText.setText("スタート→");
 
         // リスナー設定(この場合はボタン押下時の処理だよ！
         button.setOnClickListener(new View.OnClickListener() { // ←灰色になっている箇所にカーソル合わせてをAlt+Enterを押すと勝手に最適なコードに変換してくれたりするよ！この場合はラムダ式になる！
@@ -61,6 +64,8 @@ public class SampleFragment extends Fragment {
                 // ３：自分と相手の手を比較し、じゃんけんの勝者名を画面に表示する。尚、手の比較方法は問わない。
 
                 // ここからサンプル処理
+                String result = mCountNum + "人目";
+                countText.setText(result);
 
                 // 文言リセット
                 mMyHandResult.setText("");
@@ -72,10 +77,14 @@ public class SampleFragment extends Fragment {
                     mBattleCount = 0;
                     mBattleAllResult.setText("対戦結果 : なし");
                     mBattleResultArray.clear();
+                    mCountNum++;
                 } else {
                     mBattleCount++;
+                    mCountNum++;
                 }
 
+                //ボタン押すたびにインクリメントされた数字を表示すれば
+                //int i = 0;
 
                 // じゃんけんの出す手
                 RpsStatus resultMyRps = getRndRps();
