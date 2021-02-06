@@ -5,7 +5,6 @@
     android:background="#f0e68c">
 
     <TextView
-        android:id="@+id/textview1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:textSize="48sp"
