@@ -104,6 +104,7 @@ public class SampleFragment1 extends Fragment {
                         if (!res.equals("勝利！")) return;
                         winCount++;
                     }
+                    
                     if (winCount >= 2) {
                         new Handler(Looper.getMainLooper()).postDelayed(() -> {
                             FragmentManager fragmentManager = getFragmentManager();
