@@ -20,7 +20,6 @@ import com.example.sample.R;
 public class SampleFragment2 extends Fragment {
 
     int cnt = 0;
-    String msg = null;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -46,9 +45,9 @@ public class SampleFragment2 extends Fragment {
         Toast.makeText(getContext(), "Android Studio Second Study", Toast.LENGTH_SHORT).show();
         button.setOnClickListener(v -> {
             cnt++;
-            msg = String.valueOf(cnt);
+            String msg = String.valueOf(cnt);
             if (cnt % 3 == 0) {
-                msg = SekaiNoNabeatsu.BecomeFool(cnt);
+                msg = SekaiNoNabeatsu.becomeFool(cnt);
             }
             textView.setText(msg);
         });
