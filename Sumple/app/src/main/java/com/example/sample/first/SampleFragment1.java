@@ -26,6 +26,7 @@ public class SampleFragment1 extends Fragment {
 
     // コードは基本的にAOSPに沿って書いています。なのでフィールド変数とやグローバル変数には頭にm付けてます。Androidを開発するなら頭にm付けよう！！！！staticだったら頭にsだよ！
     private View mView;
+    // test
     private TextView mMyHandResult;
     private TextView mEnemyResult;
     private TextView mBattleResult;
