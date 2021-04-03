@@ -5,5 +5,10 @@
     <string name="sample_set_text">練習問題3</string>
     <string name="button_1">user id</string>
     <string name="text_login">ログイン</string>
+    <string name="user_name">ユーザーネーム</string>
+    <string name="password">パスワード</string>
+    <string name="to_do_title">やること</string>
+    <string name="login_title">ログイン画面</string>
+
 
 </resources>
