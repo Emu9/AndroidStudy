@@ -1,4 +1,4 @@
-package com.example.sample.first;
+package one.example.sample.first;
 
 public class test {
 

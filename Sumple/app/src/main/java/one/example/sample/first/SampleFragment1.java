@@ -1,4 +1,4 @@
-package com.example.sample.first;
+package one.example.sample.first;
 
 import android.os.Bundle;
 import android.os.Handler;
@@ -16,11 +16,12 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.example.sample.R;
-import com.example.sample.first.enumerate.RpsStatus;
 
 import java.util.ArrayList;
 import java.util.Objects;
 import java.util.Random;
+
+import one.example.sample.first.enumerate.RpsStatus;
 
 public class SampleFragment1 extends Fragment {
 

@@ -1,4 +1,4 @@
-package com.example.sample.second;
+package one.example.sample.second;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;

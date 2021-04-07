@@ -1,11 +1,13 @@
-package com.example.sample;
+package one.example.sample;
 
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
 
-import com.example.sample.therd.SampleFragment3;
+import com.example.sample.R;
+
+import one.example.sample.therd.SampleFragment3;
 
 public class MainActivity extends AppCompatActivity {
 

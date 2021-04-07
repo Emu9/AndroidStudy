@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  Hint : レイアウトの作り方
+ LinearLayoutで囲み、weightで重み付けを行い比率で配置する。
+android:orientation="vertical" : 縦
+android:orientation="horizontal"　: 横
+ -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/teal_700"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:text="@string/todo_title"
+        android:textColor="@color/white" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:text="@string/text_login"
+        android:layout_weight="9" />
+
+</LinearLayout>
