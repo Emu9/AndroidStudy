@@ -53,6 +53,12 @@ public class SampleFragment2 extends Fragment {
             }
         });
 
+        // 復習問題
+        // ボタンを押下したときにボタンの名前を変えてみよう。
+        // サンプル
+        Button button3 = view.findViewById(R.id.button3);
+        String textSetNameSample = getContext().getResources().getString(R.string.sample_set_text);
+        button3.setText(textSetNameSample);
 
     }
 
