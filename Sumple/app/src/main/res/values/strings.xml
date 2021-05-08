@@ -9,5 +9,6 @@
     <string name="password">パスワード</string>
     <string name="login_title">ログイン画面</string>
     <string name="todo_title">Todo List</string>
+    <string name="face">(^^♪</string>
 
 </resources>
