@@ -1,4 +1,4 @@
-package one.example.sample.fourth.model.form;
+package one.example.sample.fourth.base.model.form;
 
 import android.graphics.Bitmap;
 

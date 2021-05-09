@@ -1,4 +1,4 @@
-package one.example.sample.fourth.model.adapter;
+package one.example.sample.fourth.base.model.adapter;
 
 import android.view.View;
 import android.widget.ImageView;

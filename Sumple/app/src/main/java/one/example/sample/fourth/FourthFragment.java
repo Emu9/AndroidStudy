@@ -20,8 +20,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import one.example.sample.common.animation.SwipeHelper;
-import one.example.sample.fourth.model.adapter.MatchingAdapter;
-import one.example.sample.fourth.model.form.UserForm;
+import one.example.sample.fourth.base.model.adapter.MatchingAdapter;
+import one.example.sample.fourth.base.model.form.UserForm;
 
 public class FourthFragment extends Fragment {
 

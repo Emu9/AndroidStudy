@@ -1,4 +1,4 @@
-package one.example.sample.fourth.model.adapter;
+package one.example.sample.fourth.base.model.adapter;
 
 import android.graphics.Bitmap;
 import android.view.LayoutInflater;
@@ -12,7 +12,7 @@ import com.example.sample.R;
 
 import java.util.ArrayList;
 
-import one.example.sample.fourth.model.form.UserForm;
+import one.example.sample.fourth.base.model.form.UserForm;
 
 public class MatchingAdapter extends RecyclerView.Adapter<MatchingViewHolder> {
 
@@ -42,10 +42,12 @@ public class MatchingAdapter extends RecyclerView.Adapter<MatchingViewHolder> {
      */
     @Override
     public void onBindViewHolder(@NonNull MatchingViewHolder holder, int position) {
-        String name = mArrayList.get(position).getName();
+        UserForm userForm = mArrayList.get(position);
+
+        String name = userForm.getName();
         holder.mUserName.setText(name);
 
-        String age = mArrayList.get(position).getAge();
+        String age = userForm.getAge();
         holder.mAge.setText(age);
 
         Bitmap bitmap = mArrayList.get(position).getIcon();
