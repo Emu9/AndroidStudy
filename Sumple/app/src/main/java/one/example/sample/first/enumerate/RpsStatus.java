@@ -1,4 +1,4 @@
-package com.example.sample.first.enumerate;
+package one.example.sample.first.enumerate;
 
 /**
  * じゃんけん<br>

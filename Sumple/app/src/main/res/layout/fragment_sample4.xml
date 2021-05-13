@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  Hint : レイアウトの作り方
+ LinearLayoutで囲み、weightで重み付けを行い比率で配置する。
+android:orientation="vertical" : 縦
+android:orientation="horizontal"　: 横
+ -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" />
+</LinearLayout>
