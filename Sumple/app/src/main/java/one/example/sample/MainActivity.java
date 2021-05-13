@@ -7,7 +7,7 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.example.sample.R;
 
-import one.example.sample.fourth.FourthFragment;
+import one.example.sample.fourthPlactice.FourthPracticeFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
         // frame_layout_mainの範囲内をnew ItemFragment()でreplace(置換)。これを行うことにより、画面遷移を表現している。
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        transaction.replace(R.id.frame_layout_main, new FourthFragment());
+        transaction.replace(R.id.frame_layout_main, new FourthPracticeFragment());
         transaction.commit();
     }
 
