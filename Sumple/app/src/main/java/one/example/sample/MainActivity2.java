@@ -7,10 +7,9 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.example.sample.R;
 
-import one.example.sample.therd.SampleFragment3;
-import one.example.sample.therd.TodoFragment;
+import one.example.sample.fourth.FourthFragment;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity2 extends AppCompatActivity {
 
     /**
      * Activityにはライフサイクルが存在します。※コンポーネントの一種
@@ -24,8 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
         // frame_layout_mainの範囲内をnew ItemFragment()でreplace(置換)。これを行うことにより、画面遷移を表現している。
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        transaction.replace(R.id.frame_layout_main, new TodoFragment());
-        transaction.replace(R.id.frame_layout_main2, new SampleFragment3());
+        transaction.replace(R.id.frame_layout_main, new FourthFragment());
         transaction.commit();
     }
 

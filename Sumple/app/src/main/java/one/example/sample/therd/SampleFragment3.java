@@ -44,6 +44,9 @@ public class SampleFragment3 extends Fragment {
     }
 
 
+    /**
+     * ユーザー
+     */
     private static final String USER_ID = "USER";
 
     private static final String PASSWORD = "PASSWORD";
@@ -60,6 +63,12 @@ public class SampleFragment3 extends Fragment {
         EditText editTextPassWord = view.findViewById(R.id.edit_text_password);
         // Button
         Button button = view.findViewById(R.id.button_login);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d("TAG", "★　ユーザーの判定 : ok");
+            }
+        });
 
         // ボタンにリスナーを設定
         button.setOnClickListener(v -> {
