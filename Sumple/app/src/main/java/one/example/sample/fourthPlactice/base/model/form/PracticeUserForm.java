@@ -1,6 +1,6 @@
 package one.example.sample.fourthPlactice.base.model.form;
 
-public class PlacticeUserForm {
+public class PracticeUserForm {
     private String mName;
     private String mContent;
     private String mDone;
@@ -9,23 +9,23 @@ public class PlacticeUserForm {
         return mName;
     }
 
-    public void setName(String name) {
-        this.mName = name;
+    public void setName(String mName) {
+        this.mName = mName;
     }
 
     public String getContent() {
         return mContent;
     }
 
-    public void setContent(String content) {
-        this.mContent = content;
+    public void setContent(String mContent) {
+        this.mContent = mContent;
     }
 
     public String getDone() {
         return mDone;
     }
 
-    public void setDone(String done) {
-        this.mDone = done;
+    public void setDone(String mDone) {
+        this.mDone = mDone;
     }
 }

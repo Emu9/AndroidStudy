@@ -8,16 +8,18 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.sample.R;
 
+import org.jetbrains.annotations.NotNull;
+
 public class PracticeViewHolder extends RecyclerView.ViewHolder {
 
-    public TextView mName;
-    public TextView mContent;
-    public TextView mDone;
+    TextView mTaskName;
+    TextView mTaskContent;
+    TextView mTaskDone;
 
-    public PracticeViewHolder(@NonNull View itemView) {
+    public PracticeViewHolder(@NonNull @NotNull View itemView) {
         super(itemView);
-        mName = itemView.findViewById(R.id.text_name);
-        mContent = itemView.findViewById(R.id.text_content);
-        mDone = itemView.findViewById(R.id.text_done);
+        mTaskName = itemView.findViewById(R.id.task_name);
+        mTaskContent = itemView.findViewById(R.id.task_content);
+        mTaskDone = itemView.findViewById(R.id.task_done);
     }
 }

@@ -6,25 +6,27 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.sample.R;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.ArrayList;
 
 import one.example.sample.fourthPlactice.base.model.adapter.PracticeAdapter;
-import one.example.sample.fourthPlactice.base.model.form.PlacticeUserForm;
+import one.example.sample.fourthPlactice.base.model.form.PracticeUserForm;
 
 public class FourthPracticeFragment extends Fragment {
 
     public FourthPracticeFragment() {
-        // Required empty public constructor
     }
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
+    public void onCreate(@Nullable @org.jetbrains.annotations.Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
     }
 
@@ -36,26 +38,24 @@ public class FourthPracticeFragment extends Fragment {
     }
 
     @Override
-    public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
+    public void onViewCreated(@NonNull @NotNull View view, @Nullable @org.jetbrains.annotations.Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         RecyclerView recyclerView = view.findViewById(R.id.practice_recycler_view);
-        ArrayList<PlacticeUserForm> userFormArrayList = new ArrayList<>();
 
+        ArrayList<PracticeUserForm> practiceUserFormArrayList = new ArrayList<>();
         for (int i = 0; i < 10; i++) {
-            PlacticeUserForm placticeUserForm = new PlacticeUserForm();
-            placticeUserForm.setName("タスク" + i);
-            placticeUserForm.setContent(i + "回実施する");
+            PracticeUserForm practiceUserForm = new PracticeUserForm();
+            practiceUserForm.setName("タスク" + i);
+            practiceUserForm.setContent(i + "回実施");
             if (i % 2 == 0) {
-                placticeUserForm.setDone("完");
+                practiceUserForm.setDone("完");
             } else {
-                placticeUserForm.setDone("未");
+                practiceUserForm.setDone("未");
             }
-            userFormArrayList.add(placticeUserForm);
+            practiceUserFormArrayList.add(practiceUserForm);
         }
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-
-        PracticeAdapter practiceAdapter = new PracticeAdapter(userFormArrayList);
+        PracticeAdapter practiceAdapter = new PracticeAdapter(practiceUserFormArrayList);
         recyclerView.setAdapter(practiceAdapter);
-
     }
 }

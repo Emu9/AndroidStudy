@@ -11,16 +11,15 @@ import com.example.sample.R;
 
 import java.util.ArrayList;
 
-import one.example.sample.fourthPlactice.base.model.form.PlacticeUserForm;
+import one.example.sample.fourthPlactice.base.model.form.PracticeUserForm;
 
 public class PracticeAdapter extends RecyclerView.Adapter<PracticeViewHolder> {
 
-    private ArrayList<PlacticeUserForm> mUserFormArrayList;
+    ArrayList<PracticeUserForm> mPracticeUserFormArrayList;
 
-    public PracticeAdapter(ArrayList<PlacticeUserForm> mUserFormArrayList) {
-        this.mUserFormArrayList = mUserFormArrayList;
+    public PracticeAdapter(ArrayList<PracticeUserForm> mPracticeUserFormArrayList) {
+        this.mPracticeUserFormArrayList = mPracticeUserFormArrayList;
     }
-
 
     @NonNull
     @Override
@@ -31,21 +30,20 @@ public class PracticeAdapter extends RecyclerView.Adapter<PracticeViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull PracticeViewHolder holder, int position) {
-        PlacticeUserForm placticeUserForm = mUserFormArrayList.get(position);
+        PracticeUserForm practiceUserForm = mPracticeUserFormArrayList.get(position);
 
-        String name = placticeUserForm.getName();
-        holder.mName.setText(name);
+        String name = practiceUserForm.getName();
+        holder.mTaskName.setText(name);
 
-        String content = placticeUserForm.getContent();
-        holder.mContent.setText(content);
+        String content = practiceUserForm.getContent();
+        holder.mTaskContent.setText(content);
 
-        String done = placticeUserForm.getDone();
-        holder.mDone.setText(done);
-
+        String done = practiceUserForm.getDone();
+        holder.mTaskDone.setText(done);
     }
 
     @Override
     public int getItemCount() {
-        return mUserFormArrayList.size();
+        return mPracticeUserFormArrayList.size();
     }
 }
