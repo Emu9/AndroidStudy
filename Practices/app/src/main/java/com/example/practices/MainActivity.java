@@ -14,6 +14,10 @@ public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "★";
 
+    /**
+     * おお！境界値まわりを実行したのがわかる良い内容ですね！
+     * かなり良きです！◎
+     * */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -69,6 +73,9 @@ public class MainActivity extends AppCompatActivity {
         judgmentNumber3(2);
     }
 
+    // ok!! javadocも記載されててかなり良きです。
+    // paramの後ろは変数名が入りますが、そのあとに説明を追加しないと　「タグの説明が欠如しています」と警告されます。
+    // なので説明を挿入すると尚良いですね〇
     /**
      * 1	"int 型の変数 x、y にそれぞれ変数を格納し、x が y より大きい場合に、“xはyより大きい。”
      * という文を表示するプログラムを作成しなさい。"
@@ -81,6 +88,11 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+
+    // ok!
+    // { の前にスペースがないのが気になりましたが、構文的には問題なしです！<br>
+    //     SaveAction 有効にするとbuild時に整えてくれるのでおすすめです。<br>
+    //     ファイル→設定→その他の設定→保存アクション→一般項目内の↑２つチェック、Formatiingなんちゃらの↑２つチェックで、おけです。
     /**
      * 2	"２つの整数値を変数に格納し、
      * 大きい方（小さくない方）の数を表示するプログラムを作成しなさい。"
@@ -97,6 +109,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    // ok!
     /**
      * 3	"int 型の変数 x、y にそれぞれ変数に格納し、
      * x が ｙ より大きい場合には“xはyより大きい”、x が y より小さい場合には“xはyより小さい”と表示するプログラムを作成しなさい。"
@@ -112,6 +125,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    // ok!
     /**
      * 4	"int 型の変数 x、y にそれぞれ数値を格納し、x がｙより大きい場合には“xはyより大きい”、
      * x が y より小さい場合には“xはyより小さい”、x と y が等しい場合には“xとyは等しい”と表示するプログラムを作成しなさい。"
@@ -130,6 +144,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    // ok!
     /**
      * 5	数字を変数に格納し、それが偶数か奇数かを判定するプログラムを作成しなさい。
      * @param x
@@ -142,6 +157,8 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    // ok! 条件まとめたのですね。良いと思います！
+    // 条件が増えて横に長くなるようであれば条件1つずつ分けてあげるのもありです。
     /**
      * 6	"整変数に格納し、以下の４つの分類から該当するものを表示するプログラムを作成しなさい。
      * “正の偶数”、“正の奇数”、“負の偶数”、“負の奇数”"
@@ -159,6 +176,10 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    // ok!
+    // 複数条件がある場合、アーリーリターンという手法を取ることでネストを減らせることもできます。
+    // ※アーリーリターン 早期に処理をreturn;させ、後続の処理を見なくても読み手に伝えさせる事が出来ます。
+    // ただ、この場合はこのままで全然問題なしです！
     /**
      * 7	"試験の点数を変数にハードコーディングし、
      * 対応する成績を表示するプログラムを作成しなさい。
@@ -183,6 +204,11 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+
+    // ok!
+    // 変数の付け方良いですね！わかりやすいです！
+    // 定義値を使用する場合は、finalを付けると良いですよ！
+    // String passing = "合格"; → final String passing = "合格";
     /**
      * 8	"中間試験と、期末試験の点数（それぞれ 0 ～ 100 点）を変数にハードコーディングし、
      * 次の条件に従って合格、不合格を判定するプログラムを作成しなさい。
@@ -207,26 +233,44 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    // ok!
+    // かなり見やすいですね。YearMonthクラス使うのかなり良きデス。◎
+    // 途中でアーリーリターンを使用するともう少し見やすくなりますよ！
     /**
      * 9	"月を表す数値を入力し、その月の日数を表示するプログラムを作成しなさい。2 月は 28 日とします。
      *
      * また、1 ～ 12 以外の数値が入力された場合に、“入力が間違っています”と表示しなさい。"
      * @param Month
      */
-    public void showMonthDays(int Month){
-        if(Month <= 0 || Month > 12){
-            Log.d(TAG,"入力が間違っています");
+    public void showMonthDays(int Month) {
+        // if(Month <= 0 || Month > 12){
+        //     Log.d(TAG,"入力が間違っています");
+        // }
+        // else if(Month == 2){
+        //     Log.d(TAG,"28");
+        // }
+        // else {
+        //     YearMonth yearMonthObject = YearMonth.of(2021, Month);
+        //     int daysInMonth = yearMonthObject.lengthOfMonth();
+        //     Log.d(TAG, String.valueOf(daysInMonth));
+        // }
+
+        if (Month <= 0 || Month > 12) {
+            Log.d(TAG, "入力が間違っています");
+            return;
         }
-        else if(Month == 2){
-            Log.d(TAG,"28");
-        }
-        else {
+
+        if (Month == 2) {
+            Log.d(TAG, "28");
+        } else {
             YearMonth yearMonthObject = YearMonth.of(2021, Month);
             int daysInMonth = yearMonthObject.lengthOfMonth();
             Log.d(TAG, String.valueOf(daysInMonth));
         }
     }
 
+
+    // ok!
     /**
      * 10	整数値を入力させ、その値が偶数ならばeven、奇数ならばoddと表示するプログラムを作成せよ。
      * @param x
