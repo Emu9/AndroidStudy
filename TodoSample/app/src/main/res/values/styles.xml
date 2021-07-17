@@ -15,6 +15,6 @@
         <!-- ツールバーの文字色 -->
         <item name="android:textColorPrimary">@color/white</item>
         <!-- ツールバーの背景 -->
-        <item name="android:background">@color/dark</item>
+        <item name="android:background">@color/teal_700</item>
     </style>
 </resources>

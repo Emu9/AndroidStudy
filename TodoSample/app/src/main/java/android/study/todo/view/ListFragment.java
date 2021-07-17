@@ -1,8 +1,8 @@
-package android.studytodo.Sample.view;
+package android.study.todo.view;
 
 import android.os.Bundle;
-import android.studytodo.Sample.R;
-import android.studytodo.Sample.log.ExpansionLog;
+import android.study.todo.R;
+import android.study.todo.log.ExpansionLog;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -15,6 +15,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 public class ListFragment extends Fragment {
+
     public ListFragment() {
         // Do Nothing ..
     }
@@ -38,35 +39,21 @@ public class ListFragment extends Fragment {
     }
 
     @Override
-    public void onResume() {
-        super.onResume();
-    }
-
-    @Override
-    public void onPause() {
-        super.onPause();
-    }
-
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
-    }
-
-    @Override
     public void onCreateOptionsMenu(@NonNull Menu menu, @NonNull MenuInflater inflater) {
         inflater.inflate(R.menu.main_menu, menu);
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.add_button:
-                // ボタンをタップした際の処理を記述
-                ExpansionLog.d("ボタン押下");
-                break;
-            default:
-                return super.onOptionsItemSelected(item);
+        int itemId = item.getItemId();
+        if (itemId == R.id.add_button) {
+            ExpansionLog.d("ボタン押下");
+        } else if (itemId == R.id.search_button) {
+            ExpansionLog.d("ボタン押下");
+        } else {
+            return super.onOptionsItemSelected(item);
         }
         return super.onOptionsItemSelected(item);
     }
+
 }

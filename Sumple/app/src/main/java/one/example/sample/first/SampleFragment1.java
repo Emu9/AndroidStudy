@@ -35,7 +35,7 @@ public class SampleFragment1 extends Fragment {
     /**
      * 対戦回数
      */
-    private int mBattleCount = 0;
+    private static int sBattleCount = 0;
     private ArrayList mBattleResultArray;
 
 
@@ -79,12 +79,12 @@ public class SampleFragment1 extends Fragment {
                 mEnemyResult.setText("");
 
                 //バトルカウント計算
-                if (mBattleCount >= 3) {
-                    mBattleCount = 0;
+                if (sBattleCount >= 3) {
+                    sBattleCount = 0;
                     mBattleAllResult.setText("対戦結果 : なし");
                     mBattleResultArray.clear();
                 } else {
-                    mBattleCount++;
+                    sBattleCount++;
                 }
 
 

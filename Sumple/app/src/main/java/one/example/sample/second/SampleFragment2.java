@@ -43,7 +43,7 @@ public class SampleFragment2 extends Fragment {
         // ボタンを押下時の処理
         button.setOnClickListener(v -> {
             // インクリメント
-            mNumber++;
+            this.mNumber++;
             // 表示を更新
             if (mNumber % 3 == 0) {
                 textView.setText("AHO");
