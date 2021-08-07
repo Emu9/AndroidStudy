@@ -1,4 +1,4 @@
-package android.study.todo.base;
+package android.study.todo.model.log.base;
 
 import android.content.Context;
 import android.graphics.Canvas;

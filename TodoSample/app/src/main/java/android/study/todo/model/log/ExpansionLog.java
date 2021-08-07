@@ -1,4 +1,4 @@
-package android.study.todo.log;
+package android.study.todo.model.log;
 
 import android.util.Log;
 
