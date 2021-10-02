@@ -17,6 +17,12 @@ public class TodoData {
      * 期日
      */
     private String mDeadlineTime;
+    /**
+     * 完了済み判定フラグ<br>
+     * True : 完了済み<br>
+     * False : 未完了
+     */
+    private boolean isFinish;
 
     public String getTitle() {
         return mTitle;
@@ -40,5 +46,13 @@ public class TodoData {
 
     public void setDeadlineTime(String deadlineTime) {
         mDeadlineTime = deadlineTime;
+    }
+
+    public boolean isFinish() {
+        return isFinish;
+    }
+
+    public void setFinish(boolean finish) {
+        isFinish = finish;
     }
 }

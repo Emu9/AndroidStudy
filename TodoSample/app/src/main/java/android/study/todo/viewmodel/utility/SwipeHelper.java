@@ -1,4 +1,4 @@
-package android.study.todo.model.log.base;
+package android.study.todo.viewmodel.utility;
 
 import android.content.Context;
 import android.graphics.Canvas;

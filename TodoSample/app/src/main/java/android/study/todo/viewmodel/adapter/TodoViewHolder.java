@@ -1,4 +1,4 @@
-package android.study.todo.model.adapter;
+package android.study.todo.viewmodel.adapter;
 
 import android.study.todo.R;
 import android.view.View;

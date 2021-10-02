@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".view.MainActivity">
+    tools:context=".view.activity.MainActivity">
 
     <!-- ツールバーをセット　色等を帰る場合はここでstyle設定（androidx） -->
     <androidx.appcompat.widget.Toolbar

@@ -1,10 +1,10 @@
-package android.study.todo.view;
+package android.study.todo.view.fragmnet;
 
 import android.os.Bundle;
 import android.study.todo.R;
-import android.study.todo.model.adapter.TodoAdapter;
 import android.study.todo.model.data.TodoData;
-import android.study.todo.model.log.ExpansionLog;
+import android.study.todo.model.utility.ExpansionLog;
+import android.study.todo.viewmodel.adapter.TodoAdapter;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;

@@ -1,7 +1,8 @@
-package android.study.todo.view;
+package android.study.todo.view.activity;
 
 import android.os.Bundle;
 import android.study.todo.R;
+import android.study.todo.view.fragmnet.ListFragment;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
