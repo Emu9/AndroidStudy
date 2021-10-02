@@ -1,8 +1,8 @@
 package android.study.todo.view.fragmnet;
 
-import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.study.todo.R;
+import android.study.todo.model.business.Shaping;
 import android.study.todo.model.data.TodoData;
 import android.study.todo.model.utility.ExpansionLog;
 import android.study.todo.viewmodel.adapter.TodoAdapter;
@@ -20,6 +20,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class ListFragment extends Fragment {
 
@@ -76,7 +77,6 @@ public class ListFragment extends Fragment {
         inflater.inflate(R.menu.main_menu, menu);
     }
 
-    @SuppressLint("NonConstantResourceId")
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         ExpansionLog.d("ボタン押下");
@@ -84,14 +84,26 @@ public class ListFragment extends Fragment {
         if (id == R.id.add_button) {
             // Todo データの追加 ここに渡すデータを変更することで、任意のデータを追加できます。
             TodoData todoData = new TodoData();
+            String jsonTitle = "";// todo jsonから取得する部分
+            todoData.setTitle(jsonTitle);
+            String jsonText = "";// todo jsonから取得する部分
+            todoData.setText(jsonText);
+            String jsonDay = "";// todo jsonから取得する部分
+            todoData.setDeadlineTime(jsonDay);
 
-            mAdapter.addItem(todoData);
 
+            // リストの追加　Todo これだと3個一気に追加される。
+            Shaping shaping = new Shaping();
+            List<TodoData> list = shaping.getTodoJson();
+            for (TodoData data : list) {
+                mAdapter.addItem(data);
+            }
 
             // 画面の更新
             mAdapter.notifyDataSetChanged();
         } else if (id == R.id.search_button) {
             // Todo 検索処理
+            mAdapter.clear();
         }
         return super.onOptionsItemSelected(item);
     }

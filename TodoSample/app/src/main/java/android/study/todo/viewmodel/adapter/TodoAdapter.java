@@ -77,6 +77,10 @@ public class TodoAdapter extends RecyclerView.Adapter<TodoViewHolder> {
         mArrayList.add(todoData);
     }
 
+    public void clear() {
+        mArrayList.clear();
+        notifyDataSetChanged();
+    }
 
     /**
      * リストの数を返却する。<br>
