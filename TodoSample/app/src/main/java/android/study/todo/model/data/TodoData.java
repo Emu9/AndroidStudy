@@ -24,6 +24,10 @@ public class TodoData {
      */
     private boolean isFinish;
 
+    public TodoData() {
+        // Do Nothing
+    }
+
     public String getTitle() {
         return mTitle;
     }

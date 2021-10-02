@@ -1,5 +1,6 @@
 package android.study.todo.view.fragmnet;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.study.todo.R;
 import android.study.todo.model.data.TodoData;
@@ -21,6 +22,11 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
 public class ListFragment extends Fragment {
+
+    /**
+     * Adapter
+     */
+    private TodoAdapter mAdapter;
 
     public ListFragment() {
         // Do Nothing ..
@@ -49,19 +55,18 @@ public class ListFragment extends Fragment {
         // LayoutManagerの設定 デフォルトで縦方向
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(requireContext());
         recyclerView.setLayoutManager(layoutManager);
-
         // Stub Todo キャッシュとかJsonとか外部ファイルやDBから読み込み
         ArrayList<TodoData> dataList = new ArrayList<>();
-        for (int i = 0; i <= 5; i++) {
-            TodoData data = new TodoData();
-            data.setDeadlineTime("期日 : " + i);
-            data.setTitle("タイトル : " + i);
-            data.setTitle("内容 : " + i);
-            dataList.add(data);
-        }
+        //  for (int i = 0; i <= 20; i++) {
+        //      TodoData data = new TodoData();
+        //      data.setDeadlineTime("期日 : " + i);
+        //      data.setTitle("タイトル : " + i);
+        //      data.setTitle("内容 : " + i);
+        //      dataList.add(data);
+        //  }
 
-        TodoAdapter adapter = new TodoAdapter(dataList);
-        recyclerView.setAdapter(adapter);
+        mAdapter = new TodoAdapter(dataList);
+        recyclerView.setAdapter(mAdapter);
         ExpansionLog.d("End");
 
     }
@@ -71,16 +76,22 @@ public class ListFragment extends Fragment {
         inflater.inflate(R.menu.main_menu, menu);
     }
 
+    @SuppressLint("NonConstantResourceId")
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        int itemId = item.getItemId();
-        if (itemId == R.id.add_button) {
-            ExpansionLog.d("ボタン押下");
-            // ダイアログ出力
-        } else if (itemId == R.id.search_button) {
-            ExpansionLog.d("ボタン押下");
-        } else {
-            return super.onOptionsItemSelected(item);
+        ExpansionLog.d("ボタン押下");
+        int id = item.getItemId();
+        if (id == R.id.add_button) {
+            // Todo データの追加 ここに渡すデータを変更することで、任意のデータを追加できます。
+            TodoData todoData = new TodoData();
+
+            mAdapter.addItem(todoData);
+
+
+            // 画面の更新
+            mAdapter.notifyDataSetChanged();
+        } else if (id == R.id.search_button) {
+            // Todo 検索処理
         }
         return super.onOptionsItemSelected(item);
     }
