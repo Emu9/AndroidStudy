@@ -6,11 +6,53 @@ import org.json.JSONArray;
 import org.json.JSONException;
 
 import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
-public class AssetsUtil {
+public class FileUtility {
+
+
+    /**
+     * アプリ固有の内部ストレージに対する書き込み処理
+     *
+     * @param fileName 書き込み先のファイル名
+     * @param content  書き込む内容
+     */
+    public void saveFile(String fileName, String content) {
+
+        // 保存先指定
+        File file = new File(MyContext.getContext().getFilesDir(), fileName);
+
+        // 書き込み
+        try (FileWriter writer = new FileWriter(file)) {
+            writer.write(content);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * アプリ固有の内部ストレージに対する読み込み処理<br>
+     * String->JsonArrayに変換する場合は、以下のコードで実現出来る。<br>
+     * JSONArray jsonArray = new JSONArray(str);
+     *
+     * @param fileName 書き込み先のファイル名
+     * @return 読み込み内容 読み込み先が存在しない場合、空で返却する。
+     */
+    public String readFile(String fileName) {
+        String text = "";
+        try {
+            BufferedReader br = new BufferedReader(new FileReader(fileName));
+            text = br.readLine();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return text;
+    }
 
     /**
      * Assetsから指定したJsonファイルを取得する。
