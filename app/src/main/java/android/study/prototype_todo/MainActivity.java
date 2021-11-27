@@ -1,6 +1,7 @@
 package android.study.prototype_todo;
 
 import android.os.Bundle;
+import android.study.prototype_todo.utility.ExpansionLog;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.NavController;
@@ -18,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        ExpansionLog.d("Start");
 
         // 画面生成
         setContentView(R.layout.activity_main);
@@ -35,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = navHostFragment.getNavController();
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(navView, navController);
+        ExpansionLog.d("End");
 
     }
 
