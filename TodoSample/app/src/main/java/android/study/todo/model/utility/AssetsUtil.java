@@ -1,4 +1,4 @@
-package android.study.prototype_todo.utility;
+package android.study.todo.model.utility;
 
 import android.content.res.AssetManager;
 

@@ -26,8 +26,8 @@ public class MainActivity extends AppCompatActivity {
 
         // 変数宣言 ※ここではまだナビゲーションは動作しない。
         BottomNavigationView navView = findViewById(R.id.nav_view);
+
         // 各メニューのIDをIdsのセットとして渡します。
-        // メニューはトップレベルの目的地とみなされるため.
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications)
                 .build();

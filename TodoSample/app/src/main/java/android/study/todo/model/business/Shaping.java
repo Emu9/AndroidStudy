@@ -20,7 +20,7 @@ public class Shaping {
     private JSONArray mJSONArray;
 
     public Shaping() {
-        mJSONArray = AssetsUtil.getJson();
+        mJSONArray = AssetsUtil.getJson("todo.json");
     }
 
     /**
