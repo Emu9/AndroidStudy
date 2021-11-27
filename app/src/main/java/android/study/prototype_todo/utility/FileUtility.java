@@ -26,9 +26,9 @@ public class FileUtility {
 
         // 保存先指定
         File file = new File(MyContext.getContext().getFilesDir(), fileName);
-
+        ExpansionLog.d("save : " + MyContext.getContext().getFilesDir() + fileName);
         // 書き込み
-        try (FileWriter writer = new FileWriter(file)) {
+        try (FileWriter writer = new FileWriter(file.getPath())) {
             writer.write(content);
         } catch (IOException e) {
             e.printStackTrace();
@@ -45,8 +45,11 @@ public class FileUtility {
      */
     public static String readFile(String fileName) {
         String text = "";
+        ExpansionLog.d("read : " + MyContext.getContext().getFilesDir() + fileName);
+
         try {
-            BufferedReader br = new BufferedReader(new FileReader(fileName));
+            FileReader fileReader = new FileReader(MyContext.getContext().getFilesDir() + fileName);
+            BufferedReader br = new BufferedReader(fileReader);
             text = br.readLine();
         } catch (IOException e) {
             e.printStackTrace();
