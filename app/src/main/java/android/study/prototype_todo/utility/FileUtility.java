@@ -22,7 +22,7 @@ public class FileUtility {
      * @param fileName 書き込み先のファイル名
      * @param content  書き込む内容
      */
-    public void saveFile(String fileName, String content) {
+    public static void saveFile(String fileName, String content) {
 
         // 保存先指定
         File file = new File(MyContext.getContext().getFilesDir(), fileName);
@@ -43,7 +43,7 @@ public class FileUtility {
      * @param fileName 書き込み先のファイル名
      * @return 読み込み内容 読み込み先が存在しない場合、空で返却する。
      */
-    public String readFile(String fileName) {
+    public static String readFile(String fileName) {
         String text = "";
         try {
             BufferedReader br = new BufferedReader(new FileReader(fileName));
